@@ -53,22 +53,22 @@ func tournamentHandler(w http.ResponseWriter, r *http.Request) {
 			p3 := r.FormValue("player3")
 			p4 := r.FormValue("player4")
 
-			g11 := game{"1-1", r.FormValue("player1-1")}
-			g12 := game{"1-2", r.FormValue("player1-2")}
-			g13 := game{"1-3", r.FormValue("player1-3")}
-			g14 := game{"1-4", r.FormValue("player1-4")}
-			g21 := game{"2-1", r.FormValue("player2-1")}
-			g22 := game{"2-2", r.FormValue("player2-2")}
-			g23 := game{"2-3", r.FormValue("player2-3")}
-			g24 := game{"2-4", r.FormValue("player2-4")}
-			g31 := game{"3-1", r.FormValue("player3-1")}
-			g32 := game{"3-2", r.FormValue("player3-2")}
-			g33 := game{"3-3", r.FormValue("player3-3")}
-			g34 := game{"3-4", r.FormValue("player3-4")}
-			g41 := game{"4-1", r.FormValue("player4-1")}
-			g42 := game{"4-2", r.FormValue("player4-2")}
-			g43 := game{"4-3", r.FormValue("player4-3")}
-			g44 := game{"4-4", r.FormValue("player4-4")}
+			g11 := game{"1", r.FormValue("player1-1")}
+			g12 := game{"2", r.FormValue("player1-2")}
+			g13 := game{"3", r.FormValue("player1-3")}
+			g14 := game{"4", r.FormValue("player1-4")}
+			g21 := game{"1", r.FormValue("player2-1")}
+			g22 := game{"2", r.FormValue("player2-2")}
+			g23 := game{"3", r.FormValue("player2-3")}
+			g24 := game{"4", r.FormValue("player2-4")}
+			g31 := game{"1", r.FormValue("player3-1")}
+			g32 := game{"2", r.FormValue("player3-2")}
+			g33 := game{"3", r.FormValue("player3-3")}
+			g34 := game{"4", r.FormValue("player3-4")}
+			g41 := game{"1", r.FormValue("player4-1")}
+			g42 := game{"2", r.FormValue("player4-2")}
+			g43 := game{"3", r.FormValue("player4-3")}
+			g44 := game{"4", r.FormValue("player4-4")}
 
 			games1 := []game{g11, g12, g13, g14}
 			games2 := []game{g21, g22, g23, g24}
@@ -92,7 +92,7 @@ func tournamentHandler(w http.ResponseWriter, r *http.Request) {
 			// log.Println(p3, g31, g32, g33, g34)
 			// log.Println(p4, g41, g42, g43, g44)
 
-			log.Println(t)
+			//log.Println(t)
 		}
 
 	case "GET":
@@ -175,7 +175,7 @@ func updateMongo(t tournament) {
 	// )
 
 	//	log.Println(t)
-	log.Println(t.ID)
+	//log.Println(t.ID)
 	//	log.Println(doc)
 
 	filter := bson.NewDocument(bson.EC.String("id", t.ID))

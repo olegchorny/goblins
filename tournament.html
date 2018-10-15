@@ -15,7 +15,7 @@
     		var formData = new FormData();
             formData.append('delete','true');    
             var request = new XMLHttpRequest();
-            request.open("POST", "/tournament/Razorfoam Dagger", true);
+            request.open("POST", "/tournament/Friendrelic Robin", true);
             
             request.send(formData);
 		}
@@ -25,24 +25,24 @@
             if (document.getElementById('player1').value != "") {
                 formData.append('player1',document.getElementById('player1').value);
             } else {
-                formData.append('player1',"Player1");
+                formData.append('player1',document.getElementById("player1").placeholder);
             }
             if (document.getElementById('player2').value != "") {
                 formData.append('player2',document.getElementById('player2').value);
             } else {
-                formData.append('player2',"Player2");
+                formData.append('player2',document.getElementById("player2").placeholder);
             }
 
             if (document.getElementById('player3').value != "") {
                 formData.append('player3',document.getElementById('player3').value);
             } else {
-                formData.append('player3',"Player3");
+                formData.append('player3',document.getElementById("player3").placeholder);
             }
 
             if (document.getElementById('player4').value != "") {
                 formData.append('player4',document.getElementById('player4').value);
             } else {
-                formData.append('player4',"Player4");
+                formData.append('player4',document.getElementById("player4").placeholder);
             }
                 
                 
@@ -53,77 +53,77 @@
             if (document.getElementById('player1-2').value != "") {
                 formData.append('player1-2',document.getElementById('player1-2').value);
             } else {
-                formData.append('player1-2',"0:0");
+                formData.append('player1-2',document.getElementById('player1-2').placeholder);
             }
 
             if (document.getElementById('player1-3').value != "") {
                 formData.append('player1-3',document.getElementById('player1-3').value);
             } else {
-                formData.append('player1-3',"0:0");
+                formData.append('player1-3',document.getElementById('player1-3').placeholder);
             }
             
             if (document.getElementById('player1-4').value != "") {
                 formData.append('player1-4',document.getElementById('player1-4').value);
             } else {
-                formData.append('player1-4',"0:0");
+                formData.append('player1-4',document.getElementById('player1-4').placeholder);
             }
             
             if (document.getElementById('player2-1').value != "") {
                 formData.append('player2-1',document.getElementById('player2-1').value);
             } else {
-                formData.append('player2-1',"0:0");
+                formData.append('player2-1',document.getElementById('player2-1').placeholder);
             }
 
             if (document.getElementById('player2-3').value != "") {
                 formData.append('player2-3',document.getElementById('player2-3').value);
             } else {
-                formData.append('player2-3',"0:0");
+                formData.append('player2-3',document.getElementById('player2-3').placeholder);
             }
 
             if (document.getElementById('player2-4').value != "") {
-                formData.append('player2-4',document.getElementById('player1-3').value);
+                formData.append('player2-4',document.getElementById('player2-4').value);
             } else {
-                formData.append('player2-4',"0:0");
+                formData.append('player2-4',document.getElementById('player2-4').placeholder);
             }
 
             if (document.getElementById('player3-1').value != "") {
                 formData.append('player3-1',document.getElementById('player3-1').value);
             } else {
-                formData.append('player3-1',"0:0");
+                formData.append('player3-1',document.getElementById('player3-1').placeholder);
             }
 
             if (document.getElementById('player3-2').value != "") {
                 formData.append('player3-2',document.getElementById('player3-2').value);
             } else {
-                formData.append('player3-2',"0:0");
+                formData.append('player3-2',document.getElementById('player3-2').placeholder);
             }
 
             if (document.getElementById('player3-4').value != "") {
                 formData.append('player3-4',document.getElementById('player3-4').value);
             } else {
-                formData.append('player3-4',"0:0");
+                formData.append('player3-4',document.getElementById('player3-4').placeholder);
             }
 
             if (document.getElementById('player4-1').value != "") {
                 formData.append('player4-1',document.getElementById('player4-1').value);
             } else {
-                formData.append('player4-1',"0:0");
+                formData.append('player4-1',document.getElementById('player4-1').placeholder);
             }
 
             if (document.getElementById('player4-2').value != "") {
                 formData.append('player4-2',document.getElementById('player4-2').value);
             } else {
-                formData.append('player4-2',"0:0");
+                formData.append('player4-2',document.getElementById('player4-2').placeholder);
             }
 
             if (document.getElementById('player4-3').value != "") {
                 formData.append('player4-3',document.getElementById('player4-3').value);
             } else {
-                formData.append('player4-3',"0:0");
+                formData.append('player4-3',document.getElementById('player4-3').placeholder);
             }
             
             var request = new XMLHttpRequest();
-            request.open("POST", "/tournament/Razorfoam Dagger", true);
+            request.open("POST", "/tournament/Friendrelic Robin", true);
             
             request.send(formData);
 		}
@@ -156,14 +156,14 @@
             </tr>
                 
                         <tr>
-                            <td><input  placeholder=oleg id="player1"></input></td>
+                            <td><input  placeholder="Denis Shechelkonogov" id="player1"></input></td>
                              	
                              
                             
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=# id="player1-1-1"></input>
+                                <input size="1"  placeholder="#" id="player1-1"></input>
                         
                             </td>
 
@@ -171,7 +171,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player1-1-2"></input>
+                                <input size="1"  placeholder="2:1" id="player1-2"></input>
                         
                             </td>
 
@@ -179,7 +179,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player1-1-3"></input>
+                                <input size="1"  placeholder="2:0" id="player1-3"></input>
                         
                             </td>
 
@@ -187,7 +187,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player1-1-4"></input>
+                                <input size="1"  placeholder="2:1" id="player1-4"></input>
                         
                             </td>
 
@@ -197,14 +197,14 @@
                         </tr>
                 
                         <tr>
-                            <td><input  placeholder=Player2 id="player2"></input></td>
+                            <td><input  placeholder="alla" id="player2"></input></td>
                              	
                              
                             
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player2-2-1"></input>
+                                <input size="1"  placeholder="1:2" id="player2-1"></input>
                         
                             </td>
 
@@ -212,7 +212,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=# id="player2-2-2"></input>
+                                <input size="1"  placeholder="#" id="player2-2"></input>
                         
                             </td>
 
@@ -220,7 +220,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player2-2-3"></input>
+                                <input size="1"  placeholder="2:0" id="player2-3"></input>
                         
                             </td>
 
@@ -228,7 +228,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player2-2-4"></input>
+                                <input size="1"  placeholder="2:1" id="player2-4"></input>
                         
                             </td>
 
@@ -238,14 +238,14 @@
                         </tr>
                 
                         <tr>
-                            <td><input  placeholder=Player3 id="player3"></input></td>
+                            <td><input  placeholder="ira" id="player3"></input></td>
                              	
                              
                             
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player3-3-1"></input>
+                                <input size="1"  placeholder="0:2" id="player3-1"></input>
                         
                             </td>
 
@@ -253,7 +253,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player3-3-2"></input>
+                                <input size="1"  placeholder="0:2" id="player3-2"></input>
                         
                             </td>
 
@@ -261,7 +261,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=# id="player3-3-3"></input>
+                                <input size="1"  placeholder="#" id="player3-3"></input>
                         
                             </td>
 
@@ -269,7 +269,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player3-3-4"></input>
+                                <input size="1"  placeholder="2:1" id="player3-4"></input>
                         
                             </td>
 
@@ -279,14 +279,14 @@
                         </tr>
                 
                         <tr>
-                            <td><input  placeholder=Player4 id="player4"></input></td>
+                            <td><input  placeholder="alex" id="player4"></input></td>
                              	
                              
                             
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player4-4-1"></input>
+                                <input size="1"  placeholder="1:2" id="player4-1"></input>
                         
                             </td>
 
@@ -294,7 +294,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player4-4-2"></input>
+                                <input size="1"  placeholder="1:2" id="player4-2"></input>
                         
                             </td>
 
@@ -302,7 +302,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=0:0 id="player4-4-3"></input>
+                                <input size="1"  placeholder="1:2" id="player4-3"></input>
                         
                             </td>
 
@@ -310,7 +310,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder=# id="player4-4-4"></input>
+                                <input size="1"  placeholder="#" id="player4-4"></input>
                         
                             </td>
 
@@ -332,10 +332,10 @@
             
             
         </div>
-        <div class="four columns" >	
+        <div class="five columns" >	
             
-            <a href="/tournament/Razorfoam%20Dagger" class="button" onclick="run();" >Submit</a>
-            <a href="/table.html" class="button" >Return</a>
+            <a href="/tournament/Friendrelic%20Robin" type="submit" class="button" onclick="run();" >Submit</a>
+            <a href="/table.html" class="button" >Back</a>
             <a href="/" class="button" onclick="drop();" >Drop</a>
         
 
