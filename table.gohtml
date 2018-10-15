@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="refresh" content="10">
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+    <title>Document</title>
+
+</head>
+<script>
+        function run() {
+    		var formData = new FormData();
+            formData.append('create',"true");
+            var request = new XMLHttpRequest();
+            request.open("POST", "/table.html", true);
+            
+            request.send(formData);
+		}
+</script>
+
+
+<body>
+<div class="container">
+<a href="/table.html" onclick="run();" class="button" >Create</a>
+
+{{ range . }}
+
+    <div class="row">
+        <div class="two columns" >	
+            <h> {{ .ID }} </h>
+            <a href="/tournament/{{ .ID }}" class="button" >Open</a>
+        </div>
+        <div class="five columns" >	
+            <table class="u-full-width" >
+            <tr>
+            
+            <th>Players</th>
+                {{ range .Players }}
+                <th>{{ .Number }}</th>
+            {{end }}
+            </tr>
+                {{ range .Players }}
+                        <tr>
+                
+                            <td align="left">{{ .Name }}</td>	
+                            {{ range .Games}}
+                            <td align="center">{{ .Result }}</td>
+                            {{ end }}
+                        
+                        </tr>
+                {{ end }}	
+            </table>
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+</body>
+</html>
