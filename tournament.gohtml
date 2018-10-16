@@ -22,6 +22,10 @@
 
         function run() {
     		var formData = new FormData();
+
+            var pattern = document.getElementById('player1-2').pattern;
+            var re = new RegExp(pattern);
+
             if (document.getElementById('player1').value != "") {
                 formData.append('player1',document.getElementById('player1').value);
             } else {
@@ -50,73 +54,73 @@
                 formData.append('player2-2',"#");
                 formData.append('player3-3',"#");
                 formData.append('player4-4',"#");
-            if (document.getElementById('player1-2').value != "") {
+            if (document.getElementById('player1-2').value != "" && re.test(document.getElementById('player1-2').value)) {
                 formData.append('player1-2',document.getElementById('player1-2').value);
             } else {
                 formData.append('player1-2',document.getElementById('player1-2').placeholder);
             }
 
-            if (document.getElementById('player1-3').value != "") {
+            if (document.getElementById('player1-3').value != "" && re.test(document.getElementById('player1-3').value)) {
                 formData.append('player1-3',document.getElementById('player1-3').value);
             } else {
                 formData.append('player1-3',document.getElementById('player1-3').placeholder);
             }
             
-            if (document.getElementById('player1-4').value != "") {
+            if (document.getElementById('player1-4').value != ""  && re.test(document.getElementById('player1-4').value)) {
                 formData.append('player1-4',document.getElementById('player1-4').value);
             } else {
                 formData.append('player1-4',document.getElementById('player1-4').placeholder);
             }
             
-            if (document.getElementById('player2-1').value != "") {
+            if (document.getElementById('player2-1').value != "" && re.test(document.getElementById('player2-1').value)) {
                 formData.append('player2-1',document.getElementById('player2-1').value);
             } else {
                 formData.append('player2-1',document.getElementById('player2-1').placeholder);
             }
 
-            if (document.getElementById('player2-3').value != "") {
+            if (document.getElementById('player2-3').value != "" && re.test(document.getElementById('player2-3').value)) {
                 formData.append('player2-3',document.getElementById('player2-3').value);
             } else {
                 formData.append('player2-3',document.getElementById('player2-3').placeholder);
             }
 
-            if (document.getElementById('player2-4').value != "") {
+            if (document.getElementById('player2-4').value != "" && re.test(document.getElementById('player2-4').value)) {
                 formData.append('player2-4',document.getElementById('player2-4').value);
             } else {
                 formData.append('player2-4',document.getElementById('player2-4').placeholder);
             }
 
-            if (document.getElementById('player3-1').value != "") {
+            if (document.getElementById('player3-1').value != "" && re.test(document.getElementById('player3-1').value)) {
                 formData.append('player3-1',document.getElementById('player3-1').value);
             } else {
                 formData.append('player3-1',document.getElementById('player3-1').placeholder);
             }
 
-            if (document.getElementById('player3-2').value != "") {
+            if (document.getElementById('player3-2').value != "" && re.test(document.getElementById('player3-2').value)) {
                 formData.append('player3-2',document.getElementById('player3-2').value);
             } else {
                 formData.append('player3-2',document.getElementById('player3-2').placeholder);
             }
 
-            if (document.getElementById('player3-4').value != "") {
+            if (document.getElementById('player3-4').value != "" && re.test(document.getElementById('player3-4').value)) {
                 formData.append('player3-4',document.getElementById('player3-4').value);
             } else {
                 formData.append('player3-4',document.getElementById('player3-4').placeholder);
             }
 
-            if (document.getElementById('player4-1').value != "") {
+            if (document.getElementById('player4-1').value != "" && re.test(document.getElementById('player4-1').value)) {
                 formData.append('player4-1',document.getElementById('player4-1').value);
             } else {
                 formData.append('player4-1',document.getElementById('player4-1').placeholder);
             }
 
-            if (document.getElementById('player4-2').value != "") {
+            if (document.getElementById('player4-2').value != "" && re.test(document.getElementById('player4-2').value)) {
                 formData.append('player4-2',document.getElementById('player4-2').value);
             } else {
                 formData.append('player4-2',document.getElementById('player4-2').placeholder);
             }
 
-            if (document.getElementById('player4-3').value != "") {
+            if (document.getElementById('player4-3').value != "" && re.test(document.getElementById('player4-3').value)) {
                 formData.append('player4-3',document.getElementById('player4-3').value);
             } else {
                 formData.append('player4-3',document.getElementById('player4-3').placeholder);
@@ -157,7 +161,7 @@
                             
                             <td align="center">
                         
-                                <input size="1"  placeholder="{{ .Result }}" id="player{{$player}}-{{.Number}}"></input>
+                                <input size="1"  placeholder="{{ .Result }}" id="player{{$player}}-{{.Number}}" pattern="^[0-2]{1}:[0-2]{1}$" required></input>
                         
                             </td>
 
