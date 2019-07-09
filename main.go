@@ -10,7 +10,8 @@ import (
 	"strings"
 
 	"github.com/Pallinder/sillyname-go"
-	"github.com/mongodb/mongo-go-driver/bson"
+	"go.mongodb.org/mongo-driver/bson"
+//	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
