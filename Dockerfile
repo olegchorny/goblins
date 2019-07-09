@@ -8,7 +8,8 @@ WORKDIR /app
 RUN go get -u	"github.com/Pallinder/sillyname-go"
 RUN go get -u   "go.mongodb.org/mongo-driver/bson"
 ## RUN go get -u "github.com/mongodb/mongo-go-driver/bson"
-RUN go get -u "github.com/mongodb/mongo-go-driver/mongo"
+##RUN go get -u "github.com/mongodb/mongo-go-driver/mongo"
+RUN go get -u "go.mongodb.org/mongo-driver/mongo"
 
 RUN CGO_ENABLED=1 GOARCH=amd64 GOOS=linux go build -o server main.go
 
